@@ -1,14 +1,14 @@
 ## CLEANING DATA SAMSUNG DATASETS
 
 ## read features.txt into R
-features <- read.table("./features.txt",stringsAsFactors = FALSE)
+features <- read.table("./data/features.txt",stringsAsFactors = FALSE)
 
 
 ## TEST DATASETS (9 subjects)
 # read 3 "test" datasets 
-subj.test <- read.table("./subject_test.txt")
-X.test <- read.table("./X_test.txt")
-y.test <- read.table("./y_test.txt")
+subj.test <- read.table("./data/subject_test.txt")
+X.test <- read.table("./data/X_test.txt")
+y.test <- read.table("./data/y_test.txt")
 
 ## assign names to all variables
 names(subj.test) <- "ID"
@@ -17,9 +17,9 @@ names(X.test) <- features[,2]
 
 ## Same for "train" datasets
 ## TRAIN DATASETS (21 subjects)
-subj.train <- read.table("./subject_train.txt")
-X.train <- read.table("./X_train.txt")
-y.train <- read.table("./y_train.txt")
+subj.train <- read.table("./data/subject_train.txt")
+X.train <- read.table("./data/X_train.txt")
+y.train <- read.table("./data/y_train.txt")
 
 names(subj.train) <- "ID"
 names(y.train) <- "ACTIVITY"
