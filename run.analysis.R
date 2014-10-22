@@ -47,7 +47,7 @@ select.vars <- c(mean.vars,Mean.vars,std.vars)
 temp.dataset <- full.dtfr[,select.vars]
 
 ############ CREATES SECOND TIDY DATASET with the average of each variable for each activity and each subject
-# step5.dtfr is a dataframe with 86 rows and 563 variables. For more info README.md
+# step5.dtfr is a dataframe with 86 rows and 180 variables. For more info README.md
 
 step5.dtfr <- aggregate(.~ ID+ACTIVITY,data=temp.dataset,mean)
 
